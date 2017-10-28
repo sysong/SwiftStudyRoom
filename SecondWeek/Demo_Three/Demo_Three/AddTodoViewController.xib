@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTodoViewController" customModule="Demo_Three" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAir" destination="CZC-0a-CnT" id="igV-KR-GSM"/>
+                <outlet property="btnDone" destination="siq-SX-N1B" id="35w-e2-8H9"/>
+                <outlet property="btnMobile" destination="7hA-LA-hLf" id="0e2-la-Nqf"/>
+                <outlet property="btnShopping" destination="YqB-4k-L2L" id="WEK-js-tY3"/>
+                <outlet property="datePickerView" destination="jvn-X5-TwE" id="zUa-3D-Zem"/>
+                <outlet property="tx" destination="OTF-5Z-pyJ" id="GEB-oS-arj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhn-sB-ash">
+                    <rect key="frame" x="30" y="30" width="315" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZC-0a-CnT">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="PFB-Yx-wCh"/>
+                            </constraints>
+                            <state key="normal" image="air_unselected.png"/>
+                            <state key="selected" image="air_selected.png"/>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqB-4k-L2L">
+                            <rect key="frame" x="265" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="Jvi-OR-FUj"/>
+                            </constraints>
+                            <state key="normal" image="shopping_unselected.png"/>
+                            <state key="selected" image="shopping_selected.png"/>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hA-LA-hLf">
+                            <rect key="frame" x="132.5" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="UMB-eI-hep"/>
+                            </constraints>
+                            <state key="normal" image="mobile_unselected.png"/>
+                            <state key="selected" image="mobile_selected.png"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1TM-BP-sDm"/>
+                        <constraint firstAttribute="bottom" secondItem="CZC-0a-CnT" secondAttribute="bottom" id="9x9-lo-IXR"/>
+                        <constraint firstItem="YqB-4k-L2L" firstAttribute="top" secondItem="mhn-sB-ash" secondAttribute="top" id="Bqe-Xw-GSP"/>
+                        <constraint firstAttribute="bottom" secondItem="YqB-4k-L2L" secondAttribute="bottom" id="Byq-IP-rWJ"/>
+                        <constraint firstItem="CZC-0a-CnT" firstAttribute="top" secondItem="mhn-sB-ash" secondAttribute="top" id="Dhb-rQ-EbT"/>
+                        <constraint firstAttribute="bottom" secondItem="7hA-LA-hLf" secondAttribute="bottom" id="FpJ-LK-qeW"/>
+                        <constraint firstAttribute="trailing" secondItem="YqB-4k-L2L" secondAttribute="trailing" id="Xqd-xX-O3Z"/>
+                        <constraint firstItem="7hA-LA-hLf" firstAttribute="centerX" secondItem="mhn-sB-ash" secondAttribute="centerX" id="b9h-GW-Sfi"/>
+                        <constraint firstItem="CZC-0a-CnT" firstAttribute="leading" secondItem="mhn-sB-ash" secondAttribute="leading" id="p2D-t1-FW9"/>
+                        <constraint firstItem="7hA-LA-hLf" firstAttribute="centerY" secondItem="mhn-sB-ash" secondAttribute="centerY" id="rUo-yn-PeY"/>
+                        <constraint firstItem="7hA-LA-hLf" firstAttribute="top" secondItem="mhn-sB-ash" secondAttribute="top" id="zF2-pJ-rTa"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo title：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtK-mx-630">
+                    <rect key="frame" x="30" y="110" width="109.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="todo" borderStyle="roundedRect" placeholder="任务标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTF-5Z-pyJ">
+                    <rect key="frame" x="149.5" y="108.5" width="195.5" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jvn-X5-TwE">
+                    <rect key="frame" x="0.0" y="158.5" width="375" height="223"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="223" id="KJ1-br-azx"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="530868573.96324003">
+                        <!--2017-10-28 07:29:33 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siq-SX-N1B">
+                    <rect key="frame" x="15" y="411" width="345" height="50"/>
+                    <color key="backgroundColor" red="0.3921568627" green="0.6588235294" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0IK-pA-jFn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doneEvent:" destination="-1" eventType="touchUpInside" id="pqs-x0-W47"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="siq-SX-N1B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="15o-1l-bWY"/>
+                <constraint firstItem="jvn-X5-TwE" firstAttribute="top" secondItem="OTF-5Z-pyJ" secondAttribute="bottom" constant="20" id="7Of-8C-Gq1"/>
+                <constraint firstItem="OTF-5Z-pyJ" firstAttribute="leading" secondItem="dtK-mx-630" secondAttribute="trailing" constant="10" id="ATO-rB-5on"/>
+                <constraint firstItem="dtK-mx-630" firstAttribute="leading" secondItem="mhn-sB-ash" secondAttribute="leading" id="C1r-5l-xan"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="siq-SX-N1B" secondAttribute="trailing" constant="15" id="O7R-XR-f75"/>
+                <constraint firstItem="dtK-mx-630" firstAttribute="top" secondItem="mhn-sB-ash" secondAttribute="bottom" constant="30" id="VA7-MP-IzF"/>
+                <constraint firstItem="mhn-sB-ash" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="XM2-eE-7OL"/>
+                <constraint firstItem="OTF-5Z-pyJ" firstAttribute="centerY" secondItem="dtK-mx-630" secondAttribute="centerY" id="XQV-yH-YTQ"/>
+                <constraint firstItem="jvn-X5-TwE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="br2-Zp-mfo"/>
+                <constraint firstItem="jvn-X5-TwE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cis-eL-1XA"/>
+                <constraint firstItem="siq-SX-N1B" firstAttribute="top" secondItem="jvn-X5-TwE" secondAttribute="bottom" constant="30" id="lQ1-fS-vH8"/>
+                <constraint firstItem="OTF-5Z-pyJ" firstAttribute="trailing" secondItem="mhn-sB-ash" secondAttribute="trailing" id="pnA-Yc-tb5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mhn-sB-ash" secondAttribute="trailing" constant="30" id="rMO-zx-tVn"/>
+                <constraint firstItem="mhn-sB-ash" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="xHe-VZ-MsT"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="air_selected.png" width="120" height="120"/>
+        <image name="air_unselected.png" width="120" height="120"/>
+        <image name="mobile_selected.png" width="120" height="120"/>
+        <image name="mobile_unselected.png" width="120" height="120"/>
+        <image name="shopping_selected.png" width="120" height="110"/>
+        <image name="shopping_unselected.png" width="120" height="110"/>
+    </resources>
+</document>
