@@ -20,6 +20,7 @@ struct Person {
 }
 
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tb: UITableView!

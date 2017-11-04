@@ -10,6 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol LXFViewModeType {
+     associatedtype Input
+     associatedtype OutPut
+     func transform(input: Input) -> OutPut
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tb: UITableView!
